@@ -1,6 +1,13 @@
 import React from 'react'
 
+// Fonction pour obtenir l'année actuelle
+function getCurrentYear() {
+  const currentDate = new Date();
+  return currentDate.getFullYear();
+}
+
 export default function Footer() {
+  const currentYear = getCurrentYear();
   return (
     <>
         <footer className="footer section has-bg-image text-center" style={{backgroundImage: 'url("./assets/images/footer-bg.jpg")'}}>
@@ -75,7 +82,7 @@ export default function Footer() {
             </div>
             <div className="footer-bottom">
               <p className="copyright">
-                © 2022 Grilli. All Rights Reserved | Crafted by <a href="https://github.com/codewithsadee" target="_blank" className="link">codewithsadee </a>
+                © {currentYear} Grilli. All Rights Reserved | Crafted by <a href="https://github.com/codewithsadee" target="_blank" className="link">codewithsadee </a>
               </p>
             </div>
           </div>
